@@ -1,0 +1,2785 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@layer properties {
+  @property --elh {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+
+  @property --erx {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+  }
+
+  @property --fx {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+  }
+
+  @property --ealw {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+
+  @property --earw {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+
+  @property --erh {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+
+  @property --mh {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+
+  @property --mw {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+}
+
+:root {
+  --surface: #111;
+  --c: white;
+  --c2: #9f9f9f;
+  --c3: #DFDFDD;
+}
+
+html {
+  min-height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #141414 0%, #090A0F 100%);
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+#stars, #stars2, #stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 50px 100px #FFF, 1200px 300px #FFF, 300px 1500px #FFF, 1800px 600px #FFF, 700px 900px #FFF, 150px 1200px #FFF, 1300px 400px #FFF, 1900px 700px #FFF, 400px 1100px #FFF, 1600px 200px #FFF, 900px 1400px #FFF, 200px 800px #FFF, 1400px 500px #FFF, 1000px 1700px #FFF, 600px 300px #FFF, 1700px 1000px #FFF, 800px 1300px #FFF, 300px 600px #FFF, 1500px 900px #FFF, 1100px 200px #FFF, 500px 1500px #FFF, 1800px 400px #FFF, 700px 1100px #FFF, 1300px 700px #FFF, 200px 1400px #FFF, 1600px 300px #FFF, 900px 1000px #FFF, 400px 1700px #FFF, 1400px 500px #FFF, 1000px 1200px #FFF, 600px 800px #FFF, 1700px 1300px #FFF, 800px 200px #FFF, 300px 1100px #FFF, 1500px 600px #FFF, 1100px 1400px #FFF, 500px 900px #FFF, 1800px 300px #FFF, 700px 1700px #FFF, 1300px 1000px #FFF, 200px 1200px #FFF, 1600px 800px #FFF, 900px 400px #FFF, 400px 1300px #FFF, 1400px 200px #FFF, 1000px 1500px #FFF, 600px 700px #FFF, 1700px 1100px #FFF, 800px 500px #FFF;
+  animation: animStar 50s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 50px 100px #FFF, 1200px 300px #FFF, 300px 1500px #FFF, 1800px 600px #FFF, 700px 900px #FFF, 150px 1200px #FFF, 1300px 400px #FFF, 1900px 700px #FFF, 400px 1100px #FFF, 1600px 200px #FFF, 900px 1400px #FFF, 200px 800px #FFF, 1400px 500px #FFF, 1000px 1700px #FFF, 600px 300px #FFF, 1700px 1000px #FFF, 800px 1300px #FFF, 300px 600px #FFF, 1500px 900px #FFF, 1100px 200px #FFF, 500px 1500px #FFF, 1800px 400px #FFF, 700px 1100px #FFF, 1300px 700px #FFF, 200px 1400px #FFF, 1600px 300px #FFF, 900px 1000px #FFF, 400px 1700px #FFF, 1400px 500px #FFF, 1000px 1200px #FFF, 600px 800px #FFF, 1700px 1300px #FFF, 800px 200px #FFF, 300px 1100px #FFF, 1500px 600px #FFF, 1100px 1400px #FFF, 500px 900px #FFF, 1800px 300px #FFF, 700px 1700px #FFF, 1300px 1000px #FFF, 200px 1200px #FFF, 1600px 800px #FFF, 900px 400px #FFF, 400px 1300px #FFF, 1400px 200px #FFF, 1000px 1500px #FFF, 600px 700px #FFF, 1700px 1100px #FFF, 800px 500px #FFF;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 250px 350px #FFF, 1400px 750px #FFF, 600px 1200px #FFF, 1700px 400px #FFF, 900px 1500px #FFF, 300px 900px #FFF, 1300px 600px #FFF, 1800px 1100px #FFF, 700px 200px #FFF, 1500px 800px #FFF, 400px 1300px #FFF, 1600px 500px #FFF, 1000px 1400px #FFF, 500px 700px #FFF, 1200px 300px #FFF, 800px 1100px #FFF, 200px 1500px #FFF, 1400px 900px #FFF, 600px 400px #FFF, 1700px 1300px #FFF;
+  animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 250px 350px #FFF, 1400px 750px #FFF, 600px 1200px #FFF, 1700px 400px #FFF, 900px 1500px #FFF, 300px 900px #FFF, 1300px 600px #FFF, 1800px 1100px #FFF, 700px 200px #FFF, 1500px 800px #FFF, 400px 1300px #FFF, 1600px 500px #FFF, 1000px 1400px #FFF, 500px 700px #FFF, 1200px 300px #FFF, 800px 1100px #FFF, 200px 1500px #FFF, 1400px 900px #FFF, 600px 400px #FFF, 1700px 1300px #FFF;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 350px 450px #FFF, 1500px 800px #FFF, 700px 1200px #FFF, 1800px 500px #FFF, 1000px 1400px #FFF, 400px 900px #FFF, 1300px 600px #FFF, 1600px 1100px #FFF, 900px 300px #FFF, 1200px 700px #FFF;
+  animation: animStar 150s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 350px 450px #FFF, 1500px 800px #FFF, 700px 1200px #FFF, 1800px 500px #FFF, 1000px 1400px #FFF, 400px 900px #FFF, 1300px 600px #FFF, 1600px 1100px #FFF, 900px 300px #FFF, 1200px 700px #FFF;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  transform: translateZ(0);
+  max-width: 400px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.char {
+  display: inline-block;
+}
+
+.word-space {
+  display: inline-block;
+  width: 20px;
+}
+
+.headerText {
+  font-family: 'Jersey 20', monospace;
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 8px;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffffcc;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(10px);
+  transition: opacity 1s ease, filter 1s ease, transform 1s ease;
+  margin-top: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(10px);
+  transition: opacity 1s ease, filter 1s ease, transform 1s ease;
+}
+
+.social-icon.visible {
+  opacity: 0.8;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+}
+
+.ai-bot {
+  scale: 5.0;
+  width: 34px;
+  padding-right: 50px;
+  padding-top: 100px;
+  aspect-ratio: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  animation: blink 2.4s ease infinite, move-head 4.2s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%) infinite, mouth 1.2s ease-in infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.ai-bot .head {
+  background: linear-gradient(var(--c) 80%, color-mix(in srgb, var(--c), black 30%), var(--c));
+  border-radius: 0.375rem;
+  position: absolute;
+  width: 28px;
+  height: 20px;
+}
+
+.ai-bot .head::before,
+.ai-bot .head::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 2px;
+  height: 8px;
+  background: var(--c);
+  border-radius: 2px 0 0 2px;
+  scale: var(--ealw, 1) 1;
+}
+
+.ai-bot .head::after {
+  right: -4px;
+  left: unset;
+  border-radius: 0 2px 2px 0;
+  scale: var(--earw, 1) 1;
+}
+
+.ai-bot .face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  inset: 0 3px;
+  background: var(--surface);
+  translate: var(--fx) 0;
+  border-radius: 4px;
+  padding: 4px 4px 2px 4px;
+  gap: 3px;
+}
+
+.ai-bot .face::before {
+  content: '';
+  background: var(--c);
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  top: -2px;
+  border-radius: 2px 2px 0 0;
+  mask: radial-gradient(circle at 50% 100%, transparent 45%, black 45%);
+}
+
+.ai-bot .eyes {
+  display: flex;
+  height: 8px;
+  gap: 6px;
+}
+
+.ai-bot .eyes::before,
+.ai-bot .eyes::after {
+  content: '';
+  width: 5px;
+  height: 8px;
+  scale: 1 var(--elh);
+  filter: drop-shadow(0 0 2px var(--c2));
+  background: repeating-linear-gradient(to bottom, var(--c), var(--c) 0.25px, transparent 0.25px, transparent 0.6px), linear-gradient(to bottom, var(--c3), transparent 60%), var(--c2);
+  border-radius: 1px;
+  translate: var(--erx) 0;
+}
+
+.ai-bot .eyes::after {
+  scale: 1 var(--erh);
+  translate: var(--erx) 0;
+}
+
+.ai-bot .mouth {
+  width: 10px;
+  height: 2px;
+  background: var(--c2);
+  border-radius: 0 0 1px 1px;
+  filter: drop-shadow(0 0 2px var(--c2));
+  scale: var(--mw, 1) var(--mh, 1);
+}
+
+@layer animations {
+  @keyframes blink {
+    from, 10%, to {
+      --elh: 1;
+      --erh: 1;
+    }
+    2% {
+      --elh: 0.2;
+    }
+    8% {
+      --erh: 0.1;
+    }
+  }
+
+  @keyframes mouth {
+    from, 30%, 70%, to {
+      --mh: 1;
+      --mw: 1;
+    }
+    20% {
+      --mh: 0.5;
+    }
+    60% {
+      --mw: 0.7;
+    }
+  }
+
+  @keyframes move-head {
+    from, 20%, 40%, to {
+      --erx: 0%;
+      --fx: 0%;
+      --ealw: 1;
+      --earw: 1;
+    }
+    10% {
+      --erx: 20%;
+      --fx: 10%;
+      --ealw: 1.5;
+      --earw: 0.5;
+    }
+    30% {
+      --erx: -20%;
+      --fx: -10%;
+      --ealw: 0.5;
+      --earw: 1.5;
+    }
+  }
+}
+
+/* --- NAVBAR (ESTILO PADRÃO - DESKTOP) --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; /* Z-index alto para ficar acima de tudo */
+  display: flex; /* Torna a navbar um container flex */
+  justify-content: flex-end; /* Alinha o menu UL à direita */
+  align-items: center; /* Centraliza verticalmente o conteúdo (links) */
+  padding: 15px 20px; /* Padding padrão para a navbar */
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex; /* Menu em linha (visível em desktop) */
+  justify-content: flex-end; /* Alinha os links à direita */
+  padding-right: 0;
+  /* Garante que o menu UL não seja posicionado fixo ou absoluto em desktop */
+  position: static;
+  width: auto;
+  height: auto;
+  background: none;
+  flex-direction: row;
+  transition: none; /* Sem transição em desktop */
+}
+
+.navbar li {
+  display: inline-block; /* Links em linha */
+  position: relative;
+  padding: 0;
+}
+
+.nav-a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px; /* Padding padrão para links */
+  position: relative;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.nav-a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 0;
+  }
+}
+
+/* --- HAMBURGER MENU (ESCONDIDO POR PADRÃO - DESKTOP) --- */
+.hamburger-menu {
+    display: none; /* ESCONDIDO EM DESKTOP */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1000; /* Garante que o hambúrguer esteja acima de tudo */
+    position: relative; /* Para que suas barras possam se animar */
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- RESPONSIVIDADE PARA MOBILE (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* Espaça o logo (se tiver) e o hambúrguer */
+    padding: 15px; /* Padding para a navbar em mobile */
+  }
+
+  .hamburger-menu {
+    display: flex; /* MOSTRA O HAMBÚRGUER EM MOBILE */
+  }
+
+  .navbar ul {
+    position: fixed; /* Fixa o menu lateral */
+    top: 0;
+    right: -100%; /* Esconde o menu fora da tela */
+    width: 70%; /* Largura do menu quando aberto */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95); /* Fundo escuro semi-transparente */
+    flex-direction: column; /* Itens do menu empilhados */
+    justify-content: center; /* Centraliza itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    transition: right 0.3s ease-in-out; /* Transição para abrir/fechar */
+    z-index: 999; /* Abaixo do hambúrguer */
+    padding: 60px 20px 20px 20px; /* Padding interno do menu */
+  }
+
+  .navbar ul.active {
+    right: 0; /* Move o menu para a tela */
+  }
+
+  .navbar li {
+    width: 100%; /* Links ocupam a largura total */
+    text-align: center;
+    margin-bottom: 20px; /* Espaçamento entre os links */
+    opacity: 0; /* Começa invisível para a animação */
+    transform: translateY(20px); /* Começa um pouco abaixo para a animação de slide-up */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Transição para a animação */
+  }
+  .navbar li:last-child {
+      margin-bottom: 0;
+  }
+
+  /* Animação dos links individuais ao abrir o menu */
+  .navbar ul.active li {
+      opacity: 1; /* Torna visível */
+      transform: translateY(0); /* Sobe para a posição final */
+  }
+  /* Adicionar um delay para cada item para o efeito cascata */
+  .navbar ul.active li:nth-child(1) { transition-delay: 0.1s; }
+  .navbar ul.active li:nth-child(2) { transition-delay: 0.2s; }
+  .navbar ul.active li:nth-child(3) { transition-delay: 0.3s; }
+  .navbar ul.active li:nth-child(4) { transition-delay: 0.4s; }
+  /* Adicione mais se tiver mais itens no seu navbar */
+
+
+  .nav-a {
+    padding: 15px 0; /* Ajusta padding para links em menu vertical */
+    font-size: 16px; /* Tamanho maior para mobile */
+    letter-spacing: 0.1em;
+    width: 100%; /* Link ocupa toda a largura do li */
+    display: block; /* Para que o padding e width funcionem */
+  }
+  /* Animação do X no hambúrguer */
+  .hamburger-menu.active .bar:nth-child(2) {
+      opacity: 0; /* Esconde a barra do meio */
+  }
+  .hamburger-menu.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg); /* Gira e move a primeira barra */
+  }
+  .hamburger-menu.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg); /* Gira e move a terceira barra */
+  }
+}
+
+/* --- RESPONSIVIDADE PARA CELULARES PEQUENOS (max-width: 480px) --- */
+@media (max-width: 480px) {
+  .hamburger-menu {
+      width: 25px; /* Ícone do hambúrguer menor */
+      height: 20px;
+  }
+  .hamburger-menu .bar {
+      height: 2px; /* Barras mais finas */
+  }
+  .hamburger-menu.active .bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger-menu.active .bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar ul {
+      width: 80%; /* Menu um pouco mais estreito */
+  }
+  .nav-a {
+      font-size: 14px; /* Fonte do link menor */
+  }
+}
+
+/* --- SEÇÃO SOBRE MIM --- */
+#about {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+  padding-bottom: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+    margin-top: -400px;
+}
+
+.about-title {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  padding-bottom: 60px;
+  font-family: "Jersey 20", monospace;
+  z-index: 2;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 4px;
+}
+
+.box-about {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda base sutil */
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra padrão */
+  position: relative; /* Necessário para posicionar os pseudo-elementos */
+  overflow: hidden; /* Importante para que a animação fique dentro da caixa */
+}
+
+/* Pseudo-elemento para a linha de luz superior */
+.box-about::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Alinhado ao topo */
+  left: -100%; /* Começa fora da tela, à esquerda */
+  width: 100%;
+  height: 2px; /* Espessura da linha */
+  background: linear-gradient(90deg, transparent, #0080ff, transparent); /* Gradiente de luz azul */
+  animation: border-slide-top 3s linear infinite; /* Animação de deslizamento */
+}
+
+/* Pseudo-elemento para a linha de luz inferior */
+.box-about::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Alinhado à base */
+  right: -100%; /* Começa fora da tela, à direita */
+  width: 100%;
+  height: 2px; /* Espessura da linha */
+  background: linear-gradient(270deg, transparent, #0080ff, transparent); /* Gradiente de luz azul (inverso para o outro lado) */
+  animation: border-slide-bottom 3s linear infinite; /* Animação de deslizamento */
+}
+
+/* Keyframes para a animação da linha superior (esquerda para direita) */
+@keyframes border-slide-top {
+  0% { transform: translateX(0); } /* Começa no left: -100% */
+  100% { transform: translateX(200%); } /* Move 200% da sua própria largura para a direita, saindo da caixa */
+}
+
+/* Keyframes para a animação da linha inferior (direita para esquerda) */
+@keyframes border-slide-bottom {
+  0% { transform: translateX(0); } /* Começa no right: -100% */
+  100% { transform: translateX(-200%); } /* Move 200% da sua própria largura para a esquerda, saindo da caixa */
+}
+
+
+.about-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 17px;
+  color: #FFF;
+  line-height: 1.6;
+  position: relative; /* Garante que o texto fique acima dos pseudo-elementos */
+  z-index: 1; /* Força o texto para a frente */
+}
+
+.destaque {
+  color: #0080ff;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+  .box-about {
+    padding: 1.5rem;
+  }
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+/* Seção SKILLS */
+#skills {
+  padding-top: -500px ; /* Ajuste conforme necessário para espaçamento */
+  padding-bottom: -100px; /* Garante espaço na parte inferior */
+  position: relative; /* Para garantir que o z-index funcione bem com o background */
+  z-index: 2; /* Acima do fundo de estrelas */
+  min-height: 100vh; /* Para que a seção ocupe pelo menos a altura da viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-container {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto;
+  padding: 0 20px; /* Espaçamento lateral */
+  width: 100%;
+  text-align: center;
+}
+
+.skills-title {
+  color: white;
+  font-family: "Jersey 20", monospace;
+  font-size: 60px; /* Ajustado para se parecer mais com o 'DIOGO ALMEIDA' */
+  font-weight: 400;
+  margin-bottom: 60px; /* Espaço abaixo do título */
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 4px; /* Adicionado para combinar com o headerText */
+}
+
+.skills-grid {
+  display: flex; /* Usa flexbox para as 3 categorias */
+  flex-wrap: wrap; /* Permite que as categorias quebrem a linha em telas menores */
+  justify-content: center; /* Centraliza as categorias */
+  gap: 40px; /* Espaçamento entre as categorias */
+}
+
+.skill-category {
+  background: rgba(0, 0, 0, 0.4); /* Fundo escuro semi-transparente */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+  backdrop-filter: blur(10px); /* Efeito de vidro */
+  padding: 30px 20px;
+  width: 280px; /* Largura fixa para as caixas, ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação de hover */
+}
+
+.skill-category:hover {
+  transform: translateY(-10px); /* Leve levantamento ao passar o mouse */
+  box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.6); /* Sombra mais intensa */
+}
+
+.skill-category h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px; /* Espaço abaixo do título da categoria */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.skill-icons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas para os ícones */
+  gap: 20px; /* Espaçamento entre os ícones */
+  width: 100%; /* Ocupa a largura total da categoria */
+  justify-items: center; /* Centraliza os itens no grid */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.skill-icon-box {
+  background: rgba(255, 255, 255, 0.1); /* Fundo mais claro para os ícones */
+  border-radius: 8px; /* Mantém o formato quadrado arredondado */
+  width: 80px; /* Tamanho do quadrado do ícone */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Garante que o SVG não transborde */
+  transition: background 0.3s ease, transform 0.3s ease; /* Transição apenas para background e transform */
+}
+
+.skill-icon-box:hover {
+  background: rgba(255, 255, 255, 0.25); /* Fundo mais claro no hover */
+  transform: scale(1.1); /* Aumenta levemente a caixa */
+  /* border-radius: 50%; REMOVIDO para tirar o efeito de círculo */
+}
+
+.skill-icon-box img {
+  max-width: 70%; /* Ajusta o tamanho da imagem SVG dentro da caixa */
+  max-height: 70%;
+  height: auto;
+  display: block; /* Remove espaço extra abaixo da imagem */
+  /* filter: drop-shadow(...) REMOVIDO para tirar o brilho branco */
+  transition: transform 0.3s ease; /* Adicionado para suavizar o zoom do ícone */
+}
+
+.skill-icon-box:hover img {
+  transform: scale(1.2); /* Aumenta um pouco mais o SVG dentro da caixa no hover */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .skills-grid {
+    flex-direction: column; /* Categorias em coluna em telas pequenas */
+    align-items: center;
+  }
+
+  .skill-category {
+    width: 90%; /* Ocupa mais largura em telas menores */
+    max-width: 350px; /* Limita a largura máxima */
+  }
+
+  .skills-title {
+    font-size: 48px; /* Reduz o tamanho da fonte em telas menores */
+    margin-bottom: 40px;
+  }
+
+  .skill-category h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 40px;
+  }
+
+  .skill-icon-box {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Seção PROJETOS */
+#projects {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.projects-title {
+  color: white;
+  font-family: "Jersey 20", monospace;
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 4px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  width: 100%;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.4); /* Fundo da caixa do projeto (base) */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Blur para a caixa base */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 400px; /* Limita a largura máxima de cada card */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.6);
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%; /* Proporção da imagem (ex: 400x250) */
+  background-color: #333;
+  overflow: hidden;
+  border-top-left-radius: 16px; /* Para a borda superior da imagem */
+  border-top-right-radius: 16px; /* Para a borda superior da imagem */
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.5s ease; /* Transição para o blur */
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: flex-start;   /* ALINHA TODOS OS ITENS HORIZONTALMENTE À ESQUERDA */
+  padding: 25px;
+  opacity: 0; /* Começa invisível */
+  pointer-events: none; /* Permite interagir com a imagem por baixo inicialmente */
+  transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+  text-align: left; /* ALINHA O TEXTO DENTRO DOS ITENS À ESQUERDA */
+  backdrop-filter: blur(0px); /* Sem blur inicialmente */
+}
+
+.project-card:hover .project-image {
+  filter: blur(3px) brightness(0.6); /* Desfoca a imagem e escurece um pouco no hover */
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1; /* Mostra o overlay no hover */
+  pointer-events: auto; /* Permite interagir com o link dentro do overlay */
+  backdrop-filter: blur(5px); /* Adiciona blur ao overlay */
+}
+
+/* O wrapper de texto agora só serve para o espaçamento */
+.project-text-content {
+  width: 100%; /* Ocupa a largura total */
+  text-align: left; /* Garante que o texto dentro deste div alinhe à esquerda */
+  margin-bottom: 15px; /* Espaçamento entre o texto e o botão */
+}
+
+.project-description-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left; /* ALINHA O TÍTULO À ESQUERDA */
+}
+
+.project-description-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 0;
+  line-height: 1.4;
+  max-height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  text-align: left; /* ALINHA A DESCRIÇÃO À ESQUERDA */
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.908);
+  color: #090A0F;
+  transform: scale(1.05);
+}
+
+.project-tech-stack {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(150%);
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover .tech-icon img {
+  filter: grayscale(0%) brightness(100%);
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+
+
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .project-description-title {
+    font-size: 20px;
+  }
+
+  .project-description-text {
+    font-size: 13px;
+    max-height: 70px;
+  }
+
+  .project-link {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 40px;
+  }
+
+  .project-card {
+    border-radius: 12px;
+  }
+  .project-tech-stack {
+    padding: 10px;
+    gap: 8px;
+  }
+  .tech-icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+/* --- SEÇÃO CONTATO --- */
+#contact {
+  padding-top: 100px; /* Espaçamento superior */
+  padding-bottom: 100px; /* Espaçamento inferior */
+  position: relative;
+  z-index: 2; /* Garante que fique acima das estrelas */
+
+  /* Centralização principal da seção */
+  display: flex;
+  flex-direction: column; /* Organiza o título e a caixa em coluna */
+  justify-content: center; /* Centraliza verticalmente o conteúdo (título e caixa) */
+  align-items: center; /* Centraliza horizontalmente o conteúdo (título e caixa) */
+  min-height: 100vh; /* Faz a seção ocupar no mínimo a altura da viewport */
+}
+
+.contact-container {
+  max-width: 1200px; /* Largura máxima do conteúdo dentro da seção */
+  width: 100%; /* Ocupa 100% da largura do pai */
+  padding: 0 20px; /* Padding nas laterais */
+  text-align: center; /* Para centralizar o título "CONTATO" */
+}
+
+.contact-title {
+  color: white;
+  font-family: "Jersey 20", monospace;
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 4px;
+}
+
+.contact-box {
+  background: rgba(0, 0, 0, 0.4); /* Fundo da caixa do formulário (transparente) */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Efeito de vidro */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 40px; /* Padding interno da caixa */
+  width: 100%; /* Ocupa a largura disponível no contact-container */
+  max-width: 600px; /* LARGURA MÁXIMA FIXA da caixa do formulário, como na imagem */
+
+  margin: 0 auto; /* Para garantir a centralização caso o flexbox do pai não atue */
+
+  display: flex; /* Torna a caixa um container flex */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Centraliza horizontalmente o FORMULÁRIO dentro desta caixa */
+}
+
+.contact-form {
+  width: 100%; /* Ocupa toda a largura do .contact-box - este é o contêiner dos inputs */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os campos */
+}
+
+.form-input,
+.form-textarea {
+  width: calc(100% - 40px); /* Tenta diminuir a largura em 40px (20px de cada lado) para compensar paddings/borders se houver algum erro de box-sizing */
+  max-width: 100%; /* Garante que não ultrapasse 100% de 100% */
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center; /* Tenta centralizar individualmente cada input dentro do contact-form */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #0080ff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #bbb;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: none; /* IMPEDE O REDIMENSIONAMENTO DO TEXTAREA */
+}
+
+.submit-button {
+  background: #202020;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 25px; /* Padding vertical e horizontal para o texto */
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Largura inicial para o ícone */
+  height: 60px; /* Altura para o ícone */
+  overflow: hidden;
+  white-space: nowrap;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease, width 0.3s ease, padding 0.3s ease;
+  margin-top: 20px;
+  align-self: center; /* Centraliza o botão DENTRO do formulário flex (.contact-form) */
+  position: relative;
+}
+
+.submit-button .send-icon {
+  width: 48px; /* AUMENTADO MAIS O TAMANHO DO ÍCONE */
+  height: 48px; /* AUMENTADO MAIS O TAMANHO DO ÍCONE */
+  color: #fff;
+  transition: opacity 0.3s ease, margin-right 0.3s ease;
+  /* !important; Tentar adicionar se o tamanho ainda não funcionar, mas evite se possível */
+}
+
+.submit-button:hover {
+  background: #333;
+  border-color: #555;
+  transform: translateY(-3px);
+  width: 150px; /* Largura expandida para o texto */
+  padding-left: 15px; /* Ajusta padding para o texto "Enviar" */
+  padding-right: 15px; /* Ajusta padding para o texto "Enviar" */
+}
+
+.submit-button:hover .send-icon {
+  opacity: 0;
+  margin-right: -48px; /* Ajustei a margem para corresponder ao novo tamanho do ícone */
+}
+
+.submit-button::before {
+  content: "ENVIAR";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: white;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  transform: translateX(20px);
+}
+
+.submit-button:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+
+  #contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: auto; /* Permite que a altura da seção se ajuste ao conteúdo em telas menores */
+  }
+  .contact-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  .contact-box {
+    padding: 30px; /* Diminui o padding da caixa em telas menores */
+    max-width: 90%;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 30px); /* Ajusta a largura para telas menores */
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  .form-textarea {
+    min-height: 100px;
+  }
+  .submit-button {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .submit-button .send-icon {
+    width: 38px; /* Ajusta o tamanho do ícone em telas menores */
+    height: 38px;
+  }
+  .submit-button:hover {
+    width: 120px;
+  }
+  .submit-button::before {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  
+  .contact-title {
+    font-size: 40px;
+  }
+  .contact-box {
+    padding: 20px; /* Diminui o padding da caixa em telas muito pequenas */
+    max-width: 95%;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 20px); /* Ajusta a largura para telas muito pequenas */
+  }
+  .submit-button {
+    width: 45px;
+    height: 45px;
+  }
+  .send-icon {
+    width: 32px; /* Ajusta o tamanho do ícone em telas muito pequenas */
+    height: 32px;
+  }
+  .submit-button:hover {
+    width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  /* ... outras regras ... */
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    padding-top: 50px !important; /* Aumentado para dar mais espaço (era 70px) */
+    /* ... outras propriedades ... */
+  }
+
+  /* ... o restante do seu CSS para mobile ... */
+}
+
+/* Se você tiver um @media (min-width: 481px) (para tablets) */
+@media (min-width: 481px) {
+
+  .container {
+    padding-top: 120px !important; /* Aumente também para tablets se necessário */
+    /* ... outras propriedades ... */
+  }
+}
+/* --- RESPONSIVIDADE (AJUSTES APFenas PARA MOBILE) --- */
+
+/* ESTILOS PADRÃO PARA CELULARES PEQUENOS (0px a 480px) */
+/* Estes estilos se aplicam a telas de 0px a 480px de largura */
+@media (max-width: 480px) {
+
+  /* AJUSTES GERAIS PARA TODAS AS SEÇÕES */
+  html, body {
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* Todas as seções devem ocupar a tela e ter espaçamento */
+  section {
+    padding-top: 30px !important; /* Espaçamento superior interno da seção */
+    padding-bottom: 60px !important; /* Espaçamento inferior interno da seção */
+    min-height: 100vh !important; /* Cada seção ocupa a tela inteira */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Contêineres internos de cada seção */
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .contact-container {
+    padding: 0 15px !important;
+    width: 100% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+  .nav-a {
+    padding: 10px 8px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    flex-direction: column !important;
+    padding-top: 50px !important; /* Espaçamento da navbar para a Home */
+    min-height: 100vh !important; /* Home ocupa a tela inteira */
+  }
+  .content-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  .ai-bot {
+    scale: 3.0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    order: 1 !important;
+  }
+  #title {
+    margin-top: 0 !important;
+    max-width: 95% !important;
+    order: 2 !important;
+  }
+  .headerText {
+    font-size: 28px !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap !important;
+    font-family: 'Jersey 20', monospace !important;
+  }
+  .subtitle {
+    font-size: 13px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .social-links {
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .social-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* SEÇÃO SOBRE MIM */
+  .about-title {
+    font-size: 32px !important;
+    padding-bottom: 20px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .box-about {
+    padding: 1rem !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .about-text {
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .box-about::before,
+  .box-about::after {
+    width: calc(100% + 50px) !important;
+    left: -25px !important;
+    right: -25px !important;
+  }
+  @keyframes border-slide-top {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100% + 50px)); }
+  }
+  @keyframes border-slide-bottom {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - 50px)); }
+  }
+
+  /* SEÇÃO SKILLS */
+  .skills-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .skills-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    justify-content: center !important;
+  }
+  .skill-category {
+    width: 95% !important;
+    padding: 20px 10px !important;
+    margin: 0 auto !important;
+  }
+  .skill-category h3 {
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .skill-icons-wrapper {
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .skill-icon-box {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .skill-icon-box img {
+    max-width: 60% !important;
+    max-height: 60% !important;
+  }
+
+  /* SEÇÃO PROJETOS */
+  .projects-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-items: center !important;
+  }
+  .project-card {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    /* Remover quaisquer data-aos-delay dos cards no HTML para esta faixa de tela se quiser */
+    /* data-aos="zoom-in" data-aos-duration="800" data-aos-once="true" data-aos-offset="150" */
+  }
+  .project-image-wrapper {
+    padding-bottom: 65% !important;
+  }
+  .project-overlay {
+    padding: 12px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .project-description-title {
+    font-size: 16px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-description-text {
+    font-size: 11px !important;
+    max-height: 40px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    text-align: center !important;
+  }
+  .project-link {
+    padding: 5px 10px !important;
+    font-size: 11px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-tech-stack {
+    padding: 8px !important;
+    gap: 5px !important;
+    justify-content: center !important;
+  }
+  .tech-icon img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* SEÇÃO CONTATO */
+  .contact-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .contact-box {
+    padding: 15px !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .contact-form {
+    gap: 15px !important;
+    align-items: center !important;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 20px) !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .form-textarea {
+    min-height: 70px !important;
+  }
+  .submit-button {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 13px !important;
+    padding: 5px 10px !important;
+    margin-top: 15px !important;
+  }
+  .submit-button img.send-icon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 0 !important;
+  }
+  .submit-button:hover {
+    width: 80px !important;
+  }
+  .submit-button:hover img.send-icon {
+    margin-right: -24px !important;
+  }
+  .submit-button::before {
+    font-size: 13px !important;
+  }
+}
+
+
+/* --- MEDIA QUERIES PARA TABLETS (min-width: 481px e max-width: 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /* Ajustes gerais de espaçamento entre seções */
+  section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    min-height: 100vh !important; /* Tablets também ocupam a tela */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  /* Contêineres internos de cada seção */
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .contact-container {
+    padding: 0 20px !important;
+    max-width: 90% !important; /* Limita a largura para tablets */
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    padding-top: 160px !important; /* Maior espaçamento para tablets */
+    flex-direction: column !important;
+    min-height: 100vh !important; /* Home ocupa a tela inteira */
+  }
+  .content-wrapper {
+    gap: 30px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .ai-bot {
+    scale: 4.0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    order: 1 !important;
+  }
+  #title {
+    max-width: 90% !important;
+    order: 2 !important;
+  }
+  .headerText {
+    font-size: 40px !important;
+    letter-spacing: 4px !important;
+    white-space: normal !important;
+    font-family: 'Jersey 20', monospace !important;
+  }
+  .subtitle {
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .social-links {
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  .social-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+  .nav-a {
+    padding: 12px 10px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  /* SEÇÃO SOBRE MIM */
+  .about-title {
+    font-size: 40px !important;
+    padding-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .box-about {
+    padding: 1.5rem !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .about-text {
+    font-size: 15px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* SEÇÃO SKILLS */
+  .skills-title {
+    font-size: 40px !important;
+    margin-bottom: 40px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .skills-grid {
+    flex-direction: row !important; /* Tenta manter em linha se houver espaço */
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+  }
+  .skill-category {
+    width: 250px !important;
+    padding: 25px 15px !important;
+    margin: 0 auto !important;
+  }
+  .skill-category h3 {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .skill-icons-wrapper {
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .skill-icon-box {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .skill-icon-box img {
+    max-width: 65% !important;
+    max-height: 65% !important;
+  }
+
+  /* SEÇÃO PROJETOS */
+  .projects-title {
+    font-size: 40px !important;
+    margin-bottom: 40px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important; /* Mantém uma coluna para tablets */
+    gap: 30px !important;
+    justify-items: center !important;
+  }
+  .project-card {
+    max-width: 90% !important; /* Ajusta para caber na tela */
+    margin: 0 auto !important;
+    /* Removendo data-aos-delay daqui e confiando no HTML */
+  }
+  .project-overlay {
+    padding: 18px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .project-description-title {
+    font-size: 18px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-description-text {
+    font-size: 12px !important;
+    max-height: 55px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    text-align: center !important;
+  }
+  .project-link {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-tech-stack {
+    padding: 10px !important;
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .tech-icon img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  /* SEÇÃO CONTATO */
+  .contact-title {
+    font-size: 40px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .contact-box {
+    padding: 25px !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .contact-form {
+    gap: 18px !important;
+    align-items: center !important;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 25px) !important;
+    padding: 12px 15px !important;
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .form-textarea {
+    min-height: 90px !important;
+  }
+  .submit-button {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 16px !important;
+    padding: 10px 15px !important;
+  }
+  .submit-button img.send-icon {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 0 !important;
+  }
+  .submit-button:hover {
+    width: 110px !important;
+  }
+  .submit-button:hover img.send-icon {
+    margin-right: -28px !important;
+  }
+  .submit-button::before {
+    font-size: 16px !important;
+  }
+}
+
+/* --- RESPONSIVIDADE (AJUSTES APENAS PARA MOBILE) --- */
+
+/* ESTILOS PADRÃO PARA CELULARES PEQUENOS (0px a 480px) */
+@media (max-width: 480px) {
+
+  /* AJUSTES GERAIS PARA TODAS AS SEÇÕES */
+  html, body {
+    min-height: auto !important; /* HTML/Body não precisam forçar 100vh em mobile */
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* Todas as seções devem ter espaçamento adequado, sem ocupar a tela inteira por padrão */
+  section {
+    padding-top: 40px !important; /* Espaçamento superior interno da seção (reduzido) */
+    padding-bottom: 40px !important; /* Espaçamento inferior interno da seção (reduzido) */
+    min-height: auto !important; /* A seção se ajusta ao conteúdo, não força 100vh */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Contêineres internos de cada seção */
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .contact-container {
+    padding: 0 15px !important;
+    width: 100% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+  .nav-a {
+    padding: 10px 8px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    flex-direction: column !important;
+    padding-top: 80px !important; /* Espaçamento da navbar para a Home */
+    min-height: auto !important; /* Home se ajusta, não força 100vh */
+    padding-bottom: 40px !important; /* Ajusta espaçamento inferior da Home */
+  }
+  .content-wrapper {
+    gap: 20px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .ai-bot {
+    scale: 3.0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    order: 1 !important;
+  }
+  #title {
+    margin-top: 0 !important;
+    max-width: 95% !important;
+    order: 2 !important;
+  }
+  .headerText {
+    font-size: 28px !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap !important;
+    font-family: 'Jersey 20', monospace !important;
+  }
+  .subtitle {
+    font-size: 13px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .social-links {
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .social-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* SEÇÃO SOBRE MIM */
+  .about-title {
+    font-size: 32px !important;
+    padding-bottom: 20px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .box-about {
+    padding: 1rem !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .about-text {
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .box-about::before,
+  .box-about::after {
+    width: calc(100% + 50px) !important;
+    left: -25px !important;
+    right: -25px !important;
+  }
+  @keyframes border-slide-top {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100% + 50px)); }
+  }
+  @keyframes border-slide-bottom {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - 50px)); }
+  }
+
+  /* SEÇÃO SKILLS */
+  .skills-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .skills-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    justify-content: center !important;
+  }
+  .skill-category {
+    width: 95% !important;
+    padding: 20px 10px !important;
+    margin: 0 auto !important;
+  }
+  .skill-category h3 {
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .skill-icons-wrapper {
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .skill-icon-box {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .skill-icon-box img {
+    max-width: 60% !important;
+    max-height: 60% !important;
+  }
+
+  /* SEÇÃO PROJETOS */
+  .projects-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-items: center !important;
+  }
+  .project-card {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+  }
+  .project-image-wrapper {
+    padding-bottom: 65% !important;
+  }
+  .project-overlay {
+    padding: 12px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .project-description-title {
+    font-size: 16px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-description-text {
+    font-size: 11px !important;
+    max-height: 40px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    text-align: center !important;
+  }
+  .project-link {
+    padding: 5px 10px !important;
+    font-size: 11px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-tech-stack {
+    padding: 8px !important;
+    gap: 5px !important;
+    justify-content: center !important;
+  }
+  .tech-icon img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* SEÇÃO CONTATO */
+  .contact-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .contact-box {
+    padding: 15px !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .contact-form {
+    gap: 15px !important;
+    align-items: center !important;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 20px) !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .form-textarea {
+    min-height: 70px !important;
+  }
+  .submit-button {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 13px !important;
+    padding: 5px 10px !important;
+    margin-top: 15px !important;
+  }
+  .submit-button img.send-icon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 0 !important;
+  }
+  .submit-button:hover {
+    width: 80px !important;
+  }
+  .submit-button:hover img.send-icon {
+    margin-right: -24px !important;
+  }
+  .submit-button::before {
+    font-size: 13px !important;
+  }
+}
+
+
+/* --- MEDIA QUERIES PARA TABLETS (min-width: 481px e max-width: 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /* Ajustes gerais de espaçamento entre seções */
+  section {
+    padding-top: 60px !important; /* Espaçamento superior interno da seção */
+    padding-bottom: 60px !important; /* Espaçamento inferior interno da seção */
+    min-height: auto !important; /* Altura se ajusta ao conteúdo */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  /* Contêineres internos de cada seção */
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .contact-container {
+    padding: 0 20px !important;
+    max-width: 90% !important; /* Limita a largura para tablets */
+    margin: 0 auto 60px !important; /* Centraliza e adiciona margin-bottom */
+    text-align: center !important; /* Centraliza texto */
+  }
+  /* Remove margin-bottom do último container para não ter espaço extra no final da página */
+  #contact .contact-container {
+      margin-bottom: 0 !important;
+  }
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    padding-top: 100px !important; /* Espaçamento da navbar para a Home */
+    flex-direction: column !important;
+    min-height: auto !important; /* Home se ajusta ao conteúdo */
+    padding-bottom: 60px !important; /* Espaçamento da Home para a próxima seção */
+  }
+  .content-wrapper {
+    gap: 30px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .ai-bot {
+    scale: 4.0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    order: 1 !important;
+  }
+  #title {
+    max-width: 90% !important;
+    order: 2 !important;
+  }
+  .headerText {
+    font-size: 40px !important;
+    letter-spacing: 4px !important;
+    white-space: normal !important;
+    font-family: 'Jersey 20', monospace !important;
+  }
+  .subtitle {
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .social-links {
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  .social-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+  .nav-a {
+    padding: 12px 10px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  /* SEÇÃO SOBRE MIM */
+  .about-title {
+    font-size: 40px !important;
+    padding-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .box-about {
+    padding: 1.5rem !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .about-text {
+    font-size: 15px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* SEÇÃO SKILLS */
+  .skills-title {
+    font-size: 40px !important;
+    margin-bottom: 40px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .skills-grid {
+    flex-direction: row !important; /* Tenta manter em linha se houver espaço */
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+  }
+  .skill-category {
+    width: 250px !important;
+    padding: 25px 15px !important;
+    margin: 0 auto !important;
+  }
+  .skill-category h3 {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .skill-icons-wrapper {
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .skill-icon-box {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .skill-icon-box img {
+    max-width: 65% !important;
+    max-height: 65% !important;
+  }
+
+  /* SEÇÃO PROJETOS - AJUSTES PARA ANIMAÇÃO */
+  .projects-title {
+    font-size: 40px !important;
+    margin-bottom: 40px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important; /* Mantém uma coluna para tablets */
+    gap: 30px !important;
+    justify-items: center !important;
+  }
+  .project-card {
+    max-width: 90% !important; /* Ajusta para caber na tela */
+    margin: 0 auto !important;
+    /* Remover quaisquer data-aos-delay dos cards no HTML para esta faixa de tela se quiser */
+    /* data-aos="zoom-in" data-aos-duration="800" data-aos-once="true" data-aos-offset="150" */
+    /* Para a animação, ajuste o offset aqui para mobile */
+    /* Use data-aos-offset="50" ou "100" para que apareçam mais cedo se estiverem quebrando */
+  }
+  .project-overlay {
+    padding: 18px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .project-description-title {
+    font-size: 18px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-description-text {
+    font-size: 12px !important;
+    max-height: 55px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    text-align: center !important;
+  }
+  .project-link {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-tech-stack {
+    padding: 10px !important;
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .tech-icon img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  /* SEÇÃO CONTATO */
+  .contact-title {
+    font-size: 40px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .contact-box {
+    padding: 25px !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .contact-form {
+    gap: 18px !important;
+    align-items: center !important;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 25px) !important;
+    padding: 12px 15px !important;
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .form-textarea {
+    min-height: 90px !important;
+  }
+  .submit-button {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 16px !important;
+    padding: 10px 15px !important;
+    margin-top: 15px !important;
+  }
+  .submit-button img.send-icon {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 0 !important;
+  }
+  .submit-button:hover {
+    width: 110px !important;
+  }
+  .submit-button:hover img.send-icon {
+    margin-right: -28px !important;
+  }
+  .submit-button::before {
+    font-size: 16px !important;
+  }
+}
+/* --- RESPONSIVIDADE (AJUSTES APENAS PARA MOBILE) --- */
+
+/* ESTILOS PADRÃO PARA CELULARES PEQUENOS (0px a 480px) */
+@media (max-width: 480px) {
+
+  /* AJUSTES GERAIS PARA TODAS AS SEÇÕES */
+  html, body {
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* Todas as seções devem ter espaçamento interno adequado */
+  section {
+    padding-top: 40px !important; /* Espaçamento interno superior da seção */
+    padding-bottom: 40px !important; /* Espaçamento interno inferior da seção */
+    min-height: auto !important; /* A seção se ajusta ao conteúdo */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Contêineres internos de cada seção para espaçamento ENTRE ELAS */
+  .about-container,
+  .skills-container,
+  .projects-container { /* Não inclui contact-container aqui */
+    padding: 0 15px !important; /* Padding lateral em mobile */
+    width: 100% !important; /* Ocupa 100% da largura disponível */
+    max-width: 95% !important; /* Limita a largura para deixar um pequeno respiro */
+    margin: 0 auto 60px !important; /* Centraliza o contêiner e adiciona margin-bottom para espaçamento entre seções */
+    text-align: center !important; /* Centraliza o texto e elementos de bloco */
+  }
+
+  /* Exceção para o último container (Contato) para não ter margin-bottom extra */
+  .contact-container {
+      padding: 0 15px !important;
+      width: 100% !important;
+      max-width: 95% !important;
+      margin: 0 auto 0 !important; /* Sem margin-bottom aqui */
+      text-align: center !important;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+  .nav-a {
+    padding: 10px 8px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    flex-direction: column !important;
+    padding-top: 350px !important; /* Espaçamento da navbar para a Home */
+    min-height: auto !important; /* Home se ajusta ao conteúdo */
+    padding-bottom: 40px !important; /* Espaçamento interno da Home */
+    margin-bottom: 320px !important; /* Espaçamento da Home para a próxima seção (Sobre Mim) */
+  }
+  .content-wrapper {
+    gap: 20px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .ai-bot {
+    scale: 3.0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    order: 1 !important;
+  }
+  #title {
+    margin-top: 0 !important;
+    max-width: 95% !important;
+    order: 2 !important;
+  }
+  .headerText {
+    font-size: 48px !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap !important;
+    font-family: 'Jersey 20', monospace !important;
+  }
+  .subtitle {
+    font-size: 17px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .social-links {
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .social-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* SEÇÃO SOBRE MIM */
+  .about-title {
+    font-size: 32px !important;
+    padding-bottom: 20px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .box-about {
+    padding: 1rem !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .about-text {
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .box-about::before,
+  .box-about::after {
+    width: calc(100% + 50px) !important;
+    left: -25px !important;
+    right: -25px !important;
+  }
+  @keyframes border-slide-top {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100% + 50px)); }
+  }
+  @keyframes border-slide-bottom {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - 50px)); }
+  }
+
+  /* SEÇÃO SKILLS */
+  .skills-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .skills-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    justify-content: center !important;
+  }
+  .skill-category {
+    width: 95% !important;
+    padding: 20px 10px !important;
+    margin: 0 auto !important;
+  }
+  .skill-category h3 {
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .skill-icons-wrapper {
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .skill-icon-box {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .skill-icon-box img {
+    max-width: 60% !important;
+    max-height: 60% !important;
+  }
+
+  /* SEÇÃO PROJETOS */
+  .projects-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-items: center !important;
+  }
+  .project-card {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+    /* Para a animação, ajuste o offset aqui para mobile */
+    /* data-aos-offset="50" ou "100" para que apareçam mais cedo se estiverem quebrando */
+  }
+  .project-image-wrapper {
+    padding-bottom: 65% !important;
+  }
+  .project-overlay {
+    padding: 12px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .project-description-title {
+    font-size: 16px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-description-text {
+    font-size: 11px !important;
+    max-height: 40px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    text-align: center !important;
+  }
+  .project-link {
+    padding: 5px 10px !important;
+    font-size: 11px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-tech-stack {
+    padding: 8px !important;
+    gap: 5px !important;
+    justify-content: center !important;
+  }
+  .tech-icon img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* SEÇÃO CONTATO */
+  .contact-title {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .contact-box {
+    padding: 15px !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .contact-form {
+    gap: 15px !important;
+    align-items: center !important;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 20px) !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .form-textarea {
+    min-height: 70px !important;
+  }
+  .submit-button {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 13px !important;
+    padding: 5px 10px !important;
+    margin-top: 15px !important;
+  }
+  .submit-button img.send-icon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 0 !important;
+  }
+  .submit-button:hover {
+    width: 80px !important;
+  }
+  .submit-button:hover img.send-icon {
+    margin-right: -24px !important;
+  }
+  .submit-button::before {
+    font-size: 13px !important;
+  }
+}
+
+
+/* --- MEDIA QUERIES PARA TABLETS (min-width: 481px e max-width: 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /* Ajustes gerais de espaçamento entre seções */
+  section {
+    padding-top: 60px !important; /* Espaçamento interno superior da seção */
+    padding-bottom: 60px !important; /* Espaçamento interno inferior da seção */
+    min-height: auto !important; /* Altura se ajusta ao conteúdo */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  /* Contêineres internos de cada seção */
+  .about-container,
+  .skills-container,
+  .projects-container { /* Não inclui contact-container aqui */
+    padding: 0 20px !important;
+    max-width: 90% !important; /* Limita a largura para tablets */
+    margin: 0 auto 80px !important; /* Centraliza e adiciona margin-bottom para espaçamento entre seções */
+    text-align: center !important; /* Centraliza texto */
+  }
+  /* Exceção para o último container (Contato) para não ter margin-bottom extra */
+  .contact-container {
+      padding: 0 20px !important;
+      max-width: 90% !important;
+      margin: 0 auto 0 !important; /* Sem margin-bottom aqui */
+      text-align: center !important;
+  }
+
+  /* SEÇÃO INICIAL (HOME) */
+  .container {
+    padding-top: 180px !important; /* Espaçamento da navbar para a Home */
+    flex-direction: column !important;
+    min-height: auto !important; /* Home se ajusta ao conteúdo */
+    padding-bottom: 60px !important; /* Espaçamento interno da Home */
+    margin-bottom: 80px !important; /* Espaçamento da Home para a próxima seção */
+  }
+  .content-wrapper {
+    gap: 30px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .ai-bot {
+    scale: 4.0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    order: 1 !important;
+  }
+  #title {
+    max-width: 90% !important;
+    order: 2 !important;
+  }
+  .headerText {
+    font-size: 40px !important;
+    letter-spacing: 4px !important;
+    white-space: normal !important;
+    font-family: 'Jersey 20', monospace !important;
+  }
+  .subtitle {
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .social-links {
+    gap: 20px !important;
+    justify-content: center !important;
+  }
+  .social-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+  .nav-a {
+    padding: 12px 10px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  /* SEÇÃO SOBRE MIM */
+  .about-title {
+    font-size: 40px !important;
+    padding-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .box-about {
+    padding: 1.5rem !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .about-text {
+    font-size: 15px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* SEÇÃO SKILLS */
+  .skills-title {
+    font-size: 40px !important;
+    margin-bottom: 40px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .skills-grid {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+  }
+  .skill-category {
+    width: 250px !important;
+    padding: 25px 15px !important;
+    margin: 0 auto !important;
+  }
+  .skill-category h3 {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .skill-icons-wrapper {
+    gap: 15px !important;
+    justify-content: center !important;
+  }
+  .skill-icon-box {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .skill-icon-box img {
+    max-width: 65% !important;
+    max-height: 65% !important;
+  }
+
+  /* SEÇÃO PROJETOS - AJUSTES PARA ANIMAÇÃO */
+  .projects-title {
+    font-size: 40px !important;
+    margin-bottom: 40px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    justify-items: center !important;
+  }
+  .project-card {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    /* Remover quaisquer data-aos-delay dos cards no HTML para esta faixa de tela se quiser */
+    /* data-aos="zoom-in" data-aos-duration="800" data-aos-once="true" data-aos-offset="150" */
+    /* Para a animação, ajuste o offset aqui para mobile */
+    /* data-aos-offset="50" ou "100" para que apareçam mais cedo se estiverem quebrando */
+  }
+  .project-overlay {
+    padding: 18px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .project-description-title {
+    font-size: 18px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-description-text {
+    font-size: 12px !important;
+    max-height: 55px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    text-align: center !important;
+  }
+  .project-link {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .project-tech-stack {
+    padding: 10px !important;
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+  .tech-icon img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  /* SEÇÃO CONTATO */
+  .contact-title {
+    font-size: 40px !important;
+    margin-bottom: 30px !important;
+    font-family: "Jersey 20", monospace !important;
+  }
+  .contact-box {
+    padding: 25px !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .contact-form {
+    gap: 18px !important;
+    align-items: center !important;
+  }
+  .form-input,
+  .form-textarea {
+    width: calc(100% - 25px) !important;
+    padding: 12px 15px !important;
+    font-size: 14px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+  .form-textarea {
+    min-height: 90px !important;
+  }
+  .submit-button {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 16px !important;
+    padding: 10px 15px !important;
+    margin-top: 15px !important;
+  }
+  .submit-button img.send-icon {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 0 !important;
+  }
+  .submit-button:hover {
+    width: 110px !important;
+  }
+  .submit-button:hover img.send-icon {
+    margin-right: -28px !important;
+  }
+  .submit-button::before {
+    font-size: 16px !important;
+  }
+}
